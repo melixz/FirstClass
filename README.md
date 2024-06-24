@@ -34,3 +34,33 @@
    ```
    python manage.py runserver
    ```
+
+## Использование Docker для запуска проекта:
+
+1. Сборка Docker-образа:
+   ```
+   docker build -t first_class .
+   ```
+2. Запуск контейнера с использованием Docker Compose:
+   ```
+   docker-compose up
+   ```
+3. Остановка контейнера:
+   ```
+   docker-compose down
+   ```
+
+## Дополнительные настройки и команды:
+
+- Миграция базы данных:
+  ```
+  python manage.py migrate
+  ```
+- Создание суперпользователя:
+  ```
+  python manage.py createsuperuser
+  ```
+- Сбор статики:
+  ```
+  python manage.py collectstatic
+  ```
