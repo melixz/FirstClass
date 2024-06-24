@@ -1,0 +1,49 @@
+version: "3"
+
+services:
+  postgres:
+    image: postgres:14.8-alpine3.18
+    env_file:
+      - .env
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    #      PGDATA: "/var/lib/postgresql/data/pgdata"
+    container_name: ${DB_HOST}
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    volumes:
+      #      - postgres_data:/var/lib/postgresql/data/
+      - ./code/:/var/lib/postgresql/data/
+    ports:
+      - ${PORTS}
+    restart: unless-stopped
+    networks:
+      backend:
+  django:
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: django
+    depends_on:
+      - postgres
+    volumes:
+      - .:/code/
+    ports:
+      - "${DOCKER_EXPOSE_PORT:-8016}:${DJANGO_PORT:-8016}"
+    restart: unless-stopped
+    command: "python manage.py runserver 0.0.0.0:${DJANGO_PORT:-8016}"
+    networks:
+      backend:
+
+networks:
+  backend:
+
+#volumes:
+#  ./code:

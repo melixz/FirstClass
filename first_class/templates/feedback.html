@@ -1,0 +1,24 @@
+{% load static %}
+
+<div class="contact-wrapper">
+  <div class="contact-title">Dear Ladies<br>
+      & Gentlemens
+      <p>Allow us to handle everything for you – simply complete
+          the application form, and we'll take care of the rest!</p>
+  </div>
+  <div class="contact-form">
+    <form action="{% url 'index' %}" method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+<!--      <input type="text" placeholder="Name / Surname" required>-->
+<!--      <input type="email" placeholder="Your Email" required>-->
+<!--      <input type="tel" placeholder="Your Phone Number" required>-->
+<!--      <textarea placeholder="Preferred Method of Contact"></textarea>-->
+      <div class="buttons">
+        <button type="submit"><img src="{% static 'images/button_send.png' %}" alt=""></button>
+            <button type="button"><img src="{% static 'images/button_send2.png' %}" alt=""></button>
+                <!-- Replace with appropriate icon -->
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,863 @@
+/*  Стили для body */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Manrope";
+}
+
+/*  Стили для первого экрана */
+
+.header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 2rem 2rem 0;
+    z-index: 10;
+}
+
+.logo img {
+    padding-left: 3rem;
+}
+
+.navigation a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0 10px;
+    font-family: 'Manrope', sans-serif;
+
+}
+
+/* Стили для кнопок */
+.contact-button,
+.change-language {
+    background-color: transparent;
+    /* Прозрачный фон для кнопок */
+    border: 1px solid #fff;
+    border-radius: 20px;
+    /* Белая рамка вокруг кнопки */
+    color: #fff;
+    /* Белый цвет текста */
+    text-transform: uppercase;
+    /* Заглавные буквы */
+    padding: 0.5rem 1rem;
+    /* Паддинги вокруг текста в кнопке */
+    margin-left: 10px;
+    /* Отступ слева для кнопки */
+    cursor: pointer;
+    /* Курсор в виде руки при наведении на кнопку */
+    font-family: 'Manrope', sans-serif;
+    /* Шрифт Manrope для текста */
+}
+
+.contact-change-language {
+    padding-right: 3rem;
+    ;
+}
+
+/* Убираем отступ для первой кнопки, если требуется */
+.contact-button {
+    margin-left: 0;
+}
+
+/* Стиль для изменения состояния кнопок при наведении (hover) */
+.contact-button:hover,
+.change-language:hover {
+    background-color: #fff;
+    /* Белый фон при наведении */
+    color: #000;
+    /* Черный цвет текста при наведении */
+}
+
+.main-image-text {
+    font-family: "Manrope";
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    font-size: 40px;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: left;
+    z-index: 5;
+    font-size: 35px;
+}
+
+.main-image-text::after {
+    content: "";
+    background: url('/static/images/Vector.png') no-repeat;
+    background-size: contain;
+    width: 10px;
+    height: 15px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+
+}
+
+.main-image-text::before {
+    content: "India";
+    position: absolute;
+    font-size: 24px;
+    bottom: 0;
+    left: 30px;
+}
+
+.main-image-text h1 {
+    font-family: 'Manrope', sans-serif;
+    /* Применяем шрифт Manrope для всего текста в h1 */
+    text-transform: uppercase;
+    /* Задаем отображение текста заглавными буквами */
+}
+
+.main-image-text i {
+    font-family: 'Playfair Display SC', serif;
+    /* Применяем шрифт Playfair Display SC для текста в тегах <i> */
+    font-style: italic;
+    /* Задаем курсивное начертание */
+    font-weight: 400;
+}
+
+
+.map-marker {
+    position: absolute;
+    bottom: 15rem;
+    left: 16rem;
+    z-index: 5;
+    color: #fff;
+    font-size: 20px;
+}
+
+.map-marker img {
+    margin-right: 20px;
+    /* Правый отступ */
+}
+
+.social-links {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-right: 2rem;
+    z-index: 5;
+}
+
+.social-link span {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.social-link {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+.slider {
+    position: absolute;
+    color: #fff;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 5;
+    padding-right: 45%;
+}
+
+.slider span {
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+
+.active-slide {
+    text-decoration: none;
+}
+
+.main-image {
+    height: 100%;
+    background-image: url('/static/images/fon2.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/*  Стили для второго экрана */
+
+.second-screen {
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    /* Однородный цвет фона */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Центрирование по горизонтали */
+    justify-content: center;
+    /* Центрирование по вертикали */
+}
+
+.offer-section h2 {
+    display: block;
+    /* Позволяет применить отступы и переносы */
+}
+
+.offer-section h2 i {
+    font-family: "Playfair Display SC", serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.offer-section h2 {
+    color: #fff;
+    font-size: 4em;
+    /* Увеличиваем размер для лучшей видимости */
+    font-family: "Playfair Display", serif;
+    /* Пример шрифта, настраивается под дизайн */
+    margin: 0;
+    text-transform: uppercase;
+    /* Все буквы большие */
+    letter-spacing: 5px;
+    /* Расстояние между буквами */
+    padding-top: 2em;
+    /* Добавляем небольшой отступ снизу */
+    padding-left: 3em;
+    padding-right: 2em;
+    line-height: 1em;
+}
+
+.scroll-indicator {
+    width: 100%;
+    /* Задаем ширину, чтобы выровнять содержимое внутри */
+    display: flex;
+    justify-content: center;
+    /* Центрирование содержимого внутри блока */
+    align-items: center;
+    /* Если потребуется выравнивание по вертикали */
+}
+
+.scroll-indicator img {
+    width: 50px;
+    animation: bounce 2s infinite;
+    margin-top: 320px;
+    /* Отступ от заголовка */
+    /* Анимация прыжка вниз */
+}
+
+/* Пример анимации "прыжка" для индикатора прокрутки */
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/*  Стили для третьего экрана */
+
+.photo-ticker-wrapper {
+    --gap: 0rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+}
+
+.top-line {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 92%;
+  animation: marquee 50s linear infinite;
+}
+
+.top-line:last-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-name: scroll-abs;
+}
+
+.top-line img {
+    max-height: 320px;
+}
+
+.middle-line img {
+    max-height: 320px;
+}
+
+.middle-line {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 92%;
+  animation: marquee-r 50s linear infinite;
+}
+
+.middle-line:last-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-name: scroll-abs-r;
+  position: absolute;
+}
+
+.bottom-line {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 92%;
+  animation: marquee 50s linear infinite;
+}
+
+.bottom-line:last-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-name: scroll-abs;
+}
+
+.bottom-line img {
+    max-height: 320px;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-r {
+  from {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes scroll-abs {
+  from {
+    transform: translateX(calc(100% + var(--gap)));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes scroll-abs-r {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(100% + var(--gap)));
+  }
+}
+
+.photo-ticker {
+    display: inline-flex;
+    animation: photo-ticker-move 30s linear infinite;
+}
+
+.photo-ticker img {
+    max-height: 100px;
+    /* Или другой желаемый размер */
+    margin-right: 10px;
+    /* Расстояние между изображениями */
+}
+
+/* Анимация для фотографий */
+@keyframes photo-ticker-move {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+/*  Стили для экрана с японкой */
+
+.container2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    /* Установим контекст наложения для .container */
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: -1;
+    background-image: url("/static/images/3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Устанавливаем фон позади всех элементов */
+}
+
+/* .background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+.interactive-semi-circle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: 2;
+    /* Гарантируем, что полукруг будет поверх фона */
+}
+
+.interactive-semi-circle img {
+    width: 340px;
+    position: relative;
+   /*  padding-bottom: 140px; */
+}
+
+.destination-link {
+    position: absolute;
+    z-index: 3;
+    /* Ссылки будут над полукругом */
+}
+
+.destination-link a {
+    text-decoration: none;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.destination-link img {
+    width: 50px;
+    /* margin-right: 5px; */
+}
+
+.maldives-link {
+    top: -60px;
+    left: 158px;
+    /* padding-left: 95px; */
+}
+
+.maldives-link img {
+    width: 200px;
+}
+
+.japan-link {
+    top: 251px;
+    left: 338px;
+}
+
+.japan-link img {
+    width: 100px;
+}
+
+.vegas-link {
+    top: 577px;
+    left: 152px;
+}
+
+.vegas-link img {
+    width: 150px;
+}
+
+/*  Стили для пятого экрана */
+
+.second-screen {
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    /* Однородный цвет фона */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Центрирование по горизонтали */
+    justify-content: center;
+    /* Центрирование по вертикали */
+}
+
+.offer-section h2 {
+    display: block;
+    /* Позволяет применить отступы и переносы */
+}
+
+.offer-section h2 i {
+    font-family: "Playfair Display SC", serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.offer-section h2 {
+    color: #fff;
+    font-size: 4em;
+    /* Увеличиваем размер для лучшей видимости */
+    font-family: "Playfair Display", serif;
+    /* Пример шрифта, настраивается под дизайн */
+    margin: 0;
+    text-transform: uppercase;
+    /* Все буквы большие */
+    letter-spacing: 5px;
+    /* Расстояние между буквами */
+    padding-top: 2em;
+    /* Добавляем небольшой отступ снизу */
+    padding-left: 3em;
+    padding-right: 2em;
+    line-height: 1em;
+}
+
+.scroll-indicator {
+    width: 100%;
+    /* Задаем ширину, чтобы выровнять содержимое внутри */
+    display: flex;
+    justify-content: center;
+    /* Центрирование содержимого внутри блока */
+    align-items: center;
+    /* Если потребуется выравнивание по вертикали */
+}
+
+.scroll-indicator img {
+    width: 50px;
+    animation: bounce 2s infinite;
+    margin-top: 320px;
+    /* Отступ от заголовка */
+    /* Анимация прыжка вниз */
+}
+
+/* Пример анимации "прыжка" для индикатора прокрутки */
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+/*  Стили для шестого экрана */
+
+.gallery {
+    background-color: #000;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 863px 1080px 863px 1080px;
+    grid-template-areas:
+        "yachts yachts villas"
+        "cruises cruises cruises"
+        "hotels jets jets"
+        "challets challets challets";
+    gap: 20px;
+}
+
+.gallery__item {
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-transform: uppercase;
+    font-size: 96px;
+    color: white;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(100%);
+    transition: filter .4s;
+}
+
+@media screen and (hover:hover) {
+    .gallery__item:hover {
+        filter: grayscale(0%);
+    }
+}
+
+
+
+.gallery__item__yachts {
+    background-image: url("/static/images/yachts.jpg");
+    grid-area: yachts;
+}
+
+.gallery__item__villas {
+    background-image: url('/static/images/villas.jpg');
+    grid-area: villas;
+    color: #000;
+    font-family: 'Playfair Display SC', serif;
+    font-style: italic;
+}
+
+.gallery__item__cruises {
+    background-image: url('/static/images/cruises.jpg');
+    grid-area: cruises;
+}
+
+.gallery__item__hotels {
+    background-image: url('/static/images/hotels.jpg');
+    grid-area: hotels;
+}
+
+.gallery__item__jets {
+    background-image: url('/static/images/jets.jpg');
+    grid-area: jets;
+    color: #000;
+    font-family: 'Playfair Display SC', serif;
+    font-style: italic;
+}
+
+.gallery__item__challets {
+    background-image: url('/static/images/challets.jpg');
+    grid-area: challets;
+}
+
+
+
+.cont6 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #000;
+}
+
+.top-section {
+    display: flex;
+    flex: 1;
+    /* Adjust based on your design */
+}
+
+.image {
+    position: relative;
+    width: calc(50% - 10px);
+    /* Вычисляется как 50% ширины минус 10 пикселей */
+    height: 300px;
+    /* Настроить по необходимости */
+    overflow: hidden;
+    margin: 5px;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s ease;
+    /* Плавный переход при наведении */
+}
+
+#hotels {
+    background-image: url('/static/images/hotels.png');
+    width: 1200px;
+    height: 863px;
+}
+
+#jets {
+    background-image: url('/static/images/jets.png');
+    width: 685px;
+    height: 863px;
+}
+
+#challets {
+    background-image: url('/static/images/challets.png');
+    width: 1932px;
+    height: 1080px;
+}
+
+.image:hover {
+    filter: none;
+    /* При наведении фильтры отключаются, показывая изображение в цвете */
+}
+
+.label {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Пример медиа запроса для обработки адаптивности */
+@media (max-width: 768px) {
+    .image {
+        width: 100%;
+        /* На экранах меньше 768 пикселей ширина изображения становится 100% */
+    }
+}
+
+/*  Регистрация + футер */
+
+
+.contact-wrapper {
+    text-transform: uppercase;
+    font-family: Playfair Display SC;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    background: #000;
+    /* Assuming a dark background */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.contact-title {
+    font-size: 4em;
+    flex: 2;
+    padding-right: 250px;
+    padding-left: 250px;
+}
+
+.contact-title p {
+    font-size: 20px;
+}
+
+.contact-form {
+    flex: 2;
+    padding-right: 250px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form textarea {
+    padding: 1em;
+    margin: 0.5em 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #555;
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    padding-top: 20px;
+}
+
+
+button:hover {
+
+}
+
+
+/*   Футер */
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.ticker-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: Playfair Display SC;
+}
+
+.news-ticker p {
+    display: inline-block;
+    padding-left: 100%;
+    /* Задержка перед началом анимации */
+    animation: ticker 50s linear infinite;
+    font-size: 100px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 20px;
+
+}
+
+.company-info,
+.legal-info,
+.additional-info {
+    flex: 1;
+    margin: 0 10px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+}
+
+.social-links-img a {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.social-links-img img {
+    margin-right: 5px;
+}
+
+.footer-bottom {
+    padding-top: 10px;
+    border-top: 1px solid #fff;
+}
+
+.footer-bottom a {
+    color: #aaa;
+    text-decoration: none;
+    padding-left: 25px;
+}
+
+/* Анимация для бегущей строки */
+@keyframes ticker {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+/* Стили для ссылок */
+a {
+    color: #fff;
+    text-decoration: none;
+    padding: 45px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}

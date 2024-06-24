@@ -1,0 +1,270 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First class</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/Logo.ico' %}" />
+    <link rel="stylesheet" href='{% static "css/styles.css" %}'>
+    <!-- Стили и скрипты -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Первый экран -->
+
+    <div class="header">
+        <div class="logo"><img src='{% static "images/Logo(2).png" %}' alt="" loading="lazy"></div>
+        <div class="navigation">
+            <a href="about.html">About</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#rentals">Rentals</a>
+            <a href="#custom-tour">Create your own tour</a>
+        </div>
+        <div class="contact-change-language">
+            <button class="contact-button">Contact us</button>
+            <button class="change-language">ENG</button>
+        </div>
+    </div>
+    <div class="main-image">
+        <div class="main-image-text">
+            <h1>DISCOVER <i>THE</i><br> <i>GREATEST WONDERS</i> OF <br> THE NATURE WORLD</h1>
+        </div>
+        <div class="social-links">
+            <a href="https://www.instagram.com/ilovefirstclass/" class="social-link"><img src='{% static "images/Inst.png" %}'></a>
+            <a href="#" class="social-link"> <img src='{% static "images/Tg.png" %}'></a>
+            <a href="#" class="social-link"><img src='{% static "images/Ws.png" %}'></a>
+        </div>
+        <div class="slider">
+            <span class="active-slide">01</span> _______
+            <span>02</span>
+            <span>03</span>
+            <span>04</span>
+        </div>
+    </div>
+
+    <!-- Второй экран -->
+
+    <div class="second-screen">
+        <div class="offer-section">
+            <h2>
+                <i>EXCLUSIVE OFFERS</i>AROUND <br> THE WORLD WITH <i>FIRST CLASS</i>
+            </h2>
+            <!-- !!!Доделать расположение строк и отступы, вероятно стоит добавить в класс порядок строк для удобства -->
+            <div class="scroll-indicator">
+                <!-- Предполагаем, что здесь будет анимированная стрелка вниз -->
+                <!-- Вставьте нужную анимацию или изображение -->
+                <img src='{% static "images/scroll.png" %}' alt="Scroll down" loading="lazy">
+            </div>
+        </div>
+    </div>
+
+    <!-- Третий экран -->
+
+    <div class="photo-ticker-wrapper">
+        <div class="top-line">
+            <img src='{% static "images/galery/1r01.png" %}' alt="Фото 1" loading="lazy">
+            <img src='{% static "images/galery/1r02.png" %}' alt="Фото 2" loading="lazy">
+            <img src='{% static "images/galery/1r03.png" %}' alt="Фото 3" loading="lazy">
+            <img src='{% static "images/galery/1r04.png" %}' alt="Фото 4" loading="lazy">
+            <!-- Добавьте столько изображений, сколько нужно -->
+        </div>
+        <div aria-hidden="true" class="top-line">
+            <img src='{% static "images/galery/1r01.png" %}' alt="Фото 1" loading="lazy">
+            <img src='{% static "images/galery/1r02.png" %}' alt="Фото 2" loading="lazy">
+            <img src='{% static "images/galery/1r03.png" %}' alt="Фото 3" loading="lazy">
+            <img src='{% static "images/galery/1r04.png" %}' alt="Фото 4" loading="lazy">
+            <!-- Добавьте столько изображений, сколько нужно -->
+        </div>
+    </div>
+    <div class="photo-ticker-wrapper">
+        <div class="middle-line">
+            <img src='{% static "images/galery/2r01.png" %}' alt="Фото 1" loading="lazy">
+            <img src='{% static "images/galery/2r02.png" %}' alt="Фото 2" loading="lazy">
+            <img src='{% static "images/galery/2r03.png" %}' alt="Фото 3" loading="lazy">
+            <img src='{% static "images/galery/2r04.png" %}' alt="Фото 4" loading="lazy">
+            <!-- Добавьте столько изображений, сколько нужно -->
+        </div>
+        <div aria-hidden="true" class="middle-line">
+            <img src='{% static "images/galery/2r01.png" %}' alt="Фото 1" loading="lazy">
+            <img src='{% static "images/galery/2r02.png" %}' alt="Фото 2" loading="lazy">
+            <img src='{% static "images/galery/2r03.png" %}' alt="Фото 3" loading="lazy">
+            <img src='{% static "images/galery/2r04.png" %}' alt="Фото 4" loading="lazy">
+            <!-- Добавьте столько изображений, сколько нужно -->
+        </div>
+    </div>
+    <div class="photo-ticker-wrapper">
+        <div class="bottom-line">
+            <img src='{% static "images/galery/3r01.png" %}' alt="Фото 1" loading="lazy">
+            <img src='{% static "images/galery/3r02.png" %}' alt="Фото 2" loading="lazy">
+            <img src='{% static "images/galery/3r03.png" %}' alt="Фото 3" loading="lazy">
+            <img src='{% static "images/galery/3r04.png" %}' alt="Фото 4" loading="lazy">
+            <!-- Добавьте столько изображений, сколько нужно -->
+        </div>
+        <div aria-hidden="true" class="bottom-line">
+            <img src='{% static "images/galery/3r01.png" %}' alt="Фото 1" loading="lazy">
+            <img src='{% static "images/galery/3r02.png" %}' alt="Фото 2" loading="lazy">
+            <img src='{% static "images/galery/3r03.png" %}' alt="Фото 3" loading="lazy">
+            <img src='{% static "images/galery/3r04.png" %}' alt="Фото 4" loading="lazy">
+            <!-- Добавьте столько изображений, сколько нужно -->
+        </div>
+    </div>
+
+
+    <!--Экран с японкой -->
+    <div class="container2">
+        <!-- Фоновая картинка -->
+        <div class="background-image">
+            <!-- <img src="3.png" alt="Киото"> -->
+        </div>
+        <!-- Интерактивный полукруг -->
+        <div class="interactive-semi-circle">
+            <img src='{% static "images/circle.png" %}' alt="Интерактивная полусфера">
+
+
+        <!-- Мини картинка для Мальдив -->
+            <div class="destination-link maldives-link">
+                <a href="path/to/maldives-page.html">
+                    <img src='{% static "images/maldives.png" %}' alt="#">
+
+                </a>
+            </div>
+
+        <!-- Мини картинка для Японии -->
+            <div class="destination-link japan-link">
+                <a href="path/to/japan-page.html">
+                    <img src='{% static "images/Japan.png" %}' alt="Япония">
+                    <span>Japan</span>
+                </a>
+            </div>
+
+        <!-- Мини картинка для Лас-Вегаса -->
+            <div class="destination-link vegas-link">
+                <a href="path/to/vegas-page.html">
+                    <img src='{% static "images/vegas.png" %}' alt="Лас-Вегас">
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Пятый экран -->
+
+
+    <div class="second-screen">
+        <div class="offer-section">
+            <h2>
+                <i>TOP-TIER</i>Destinations <br>WORLDWIDE, BOASTING<i>OPULENT</i><br><i>ACCOMMODATIONS &
+                    EXCLUSIVE</i><br><i>RENTALS</i>
+            </h2>
+            <!-- !!!Доделать расположение строк и отступы, вероятно стоит добавить в класс порядок строк для удобства -->
+            <div class="scroll-indicator">
+                <!-- Предполагаем, что здесь будет анимированная стрелка вниз -->
+                <!-- Вставьте нужную анимацию или изображение -->
+                <img src='{% static "images/scroll.png" %}' alt="Scroll down" loading="lazy">
+            </div>
+        </div>
+    </div>
+
+    <!--Шестой экран -->
+
+    <section class="gallery">
+        <div class="gallery__item gallery__item__yachts">
+            <span class="gallery__item__label">yachts</span>
+        </div>
+        <div class="gallery__item gallery__item__villas">
+            <span class="gallery__item__label">villas</span>
+        </div>
+        <div class="gallery__item gallery__item__cruises">
+            <span class="gallery__item__label">cruises</span>
+        </div>
+        <div class="gallery__item gallery__item__hotels">
+            <span class="gallery__item__label">hotels</span>
+        </div>
+        <div class="gallery__item gallery__item__jets">
+            <span class="gallery__item__label">jets</span>
+        </div>
+        <div class="gallery__item gallery__item__challets">
+            <span class="gallery__item__label">challets</span>
+        </div>
+    </section>
+
+    <!--Регистрация + футер -->
+
+    <div class="contact-wrapper">
+        <div class="contact-title">Dear Ladies<br>
+            & Gentlemens
+            <p>Allow us to handle everything for you – simply complete
+                the application form, and we'll take care of the rest!</p>
+        </div>
+        <div class="contact-form">
+            <form action="{% url 'index' %}" method="POST">
+                {% csrf_token %}
+                {% for field in form %}
+                    {{ field }}
+                {% endfor %}
+                <div class="buttons">
+                    <button type="submit"><img src="{% static 'images/button_send.png' %}" alt='Send'></button>
+                    <button type="button"><img src='{% static "images/button_send2.png" %}' alt="#"></button>
+                            <!-- Replace with appropriate icon -->
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- футер -->
+
+    <footer>
+        <div class="ticker-wrapper">
+            <div class="news-ticker">
+                <p>TRAVEL WITH FIRST CLASS. EXPERIENCE EXCLUSIVE OFFERS & SEE WHOLE WORLD TRAVEL WITH FIRST CLASS.
+                    EXPERIENCE EXCLUSIVE OFFERS & SEE WHOLE WORLD TRAVEL WITH FIRST CLASS. EXPERIENCE EXCLUSIVE OFFERS &
+                    SEE WHOLE WORLD TRAVEL WITH FIRST CLASS. EXPERIENCE EXCLUSIVE OFFERS & SEE WHOLE WORLD TRAVEL WITH
+                    FIRST CLASS. EXPERIENCE EXCLUSIVE OFFERS & SEE WHOLE WORLD TRAVEL WITH FIRST CLASS. EXPERIENCE
+                    EXCLUSIVE OFFERS & SEE WHOLE WORLD</p>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <!-- Предполагаем, что здесь будет анимированная стрелка вниз -->
+            <!-- Вставьте нужную анимацию или изображение -->
+            <img src='{% static "images/arrowup.png" %}' alt="Scroll down" loading="lazy" style="position: relative;top: 234px;">
+        </div>
+        <div class="footer-content">
+            <div class="company-info">
+                <h3>First Class Solutions</h3>
+                <address>
+                    <p>Moscow</p>
+                    <p>Moscow City 1st Tikhvinsky Tulip, No. 5-7. Premises. 1p</p>
+                    <p>Tel: +66 99 69 01 11</p>
+                </address>
+                <a href='{% static "images/contact.html" %}'>Contact Us</a>
+            </div>
+            <div class="legal-info">
+                <p>INN: 9707025574</p>
+                <p>KPP: 770701001</p>
+            </div>
+            <div class="social-links-img">
+                <a href="#" class="social-link"><img src='{% static "images/Inst.png" %}' alt="Instagram" loading="lazy"></a>
+                <a href="#" class="social-link"><img src='{% static "images/Tg.png" %}' alt="Telegram" loading="lazy"></a>
+                <a href="#" class="social-link"><img src='{% static "images/Ws.png" %}' alt="WhatsApp" loading="lazy"></a>
+            </div>
+            <div class="additional-info">
+                <p>A service for booking hotels, villas, private jets, and yachts directly from reliable suppliers and
+                    major partners</p><br>
+                <p>2024 © All Rights Reserved</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a href="privacy-policy.html">Privacy Policy</a> .
+            <a href="cookies-policy.html">Cookies Policy</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
